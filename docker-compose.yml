@@ -1,0 +1,17 @@
+version: '3.6'
+volumes:
+  postgres-data:
+    driver: local
+
+services:
+  web:
+    build: .
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+    ports:
+      - "4000:4000"
+      - "4001:4001"
+    command:
+      - ./run.sh

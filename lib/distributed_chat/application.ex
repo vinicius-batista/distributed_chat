@@ -9,7 +9,8 @@ defmodule DistributedChat.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      DistributedChatWeb.Endpoint
+      DistributedChatWeb.Endpoint,
+      DistributedChatWeb.Presence
       # Starts a worker by calling: DistributedChat.Worker.start_link(arg)
       # {DistributedChat.Worker, arg},
     ]
